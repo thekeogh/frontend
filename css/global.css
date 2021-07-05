@@ -1,0 +1,64 @@
+/*
+  Variables
+*/
+:root {
+  /* Colours */
+  --color-body-background: #fff;
+  --color-body-foreground: #000;
+
+  /* Fonts */
+  --font-family-default: 'Bitter', serif;
+  --font-family-code: 'Fira Mono', monospace;
+  --font-size-default: 16px;
+}
+
+/*
+  Reset
+*/
+*, ::before, ::after { box-sizing: border-box }
+ul[class], ol[class], fieldset { padding: 0 }
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, i, figure, figcaption, blockquote, dl, dd, fieldset { margin: 0; font-weight: 400; font-style: normal; font-family: var(--font-family-default); }
+body { min-height: 100vh; scroll-behavior: smooth; text-rendering: optimizeSpeed; line-height: 1.5 }
+ul[class], ol[class] { list-style: none }
+a:not([class]) { text-decoration-skip-ink: auto }
+img { max-width:100%; border: 0; display: block }
+input, button, textarea,select { font: inherit }
+:focus, fieldset { outline:none }
+fieldset { min-width: 0; border:0 }
+body:not(:-moz-handler-blocked) fieldset { display: table-cell }
+a, a:visited, a:visited:hover, a:active { text-decoration: none }
+@media (prefers-reduced-motion: reduce) {*{ animation-duration: .01ms!important; animation-iteration-count: 1!important; transition-duration: .01ms!important; scroll-behavior: auto!important }}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus { box-shadow: none; -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important; }
+
+/*
+  Structure
+*/
+#__next {
+  height: 100vh
+}
+body {
+  background: var(--color-body-background);
+  font-size: var(--font-size-default);
+  color: var(--color-body-foreground);
+}
+::placeholder {
+  color: #ADADAD;
+}
+
+/*
+  Hyperlinks
+*/
+a:link, a:visited, a:hover, a:active { 
+  color: red;
+  text-decoration: none;
+}
+a:hover, a:visited:hover {
+  text-decoration: underline;
+}
+
+/*
+  Responsive
+*/
+@media (max-width: 767px) {
+
+}
