@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -14,8 +15,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"],
+    "typeRoots": [
+      "node_modules/@types",
+      "src/**/types.d.ts"
+    ],
+    "paths": {
+      "@components": ["src/components/index.ts"],
+      "@layouts": ["src/layouts/index.ts"],
+      "@sections": ["src/sections/index.ts"],
+      "@src*": ["src*"],
+      "@utils": ["src/utils/index.ts"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "tests"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

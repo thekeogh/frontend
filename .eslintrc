@@ -1,0 +1,127 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:import/typescript"
+  ],
+  "ignorePatterns": [
+    "build/",
+    "dist/",
+    "coverage/",
+    "deploy/",
+    "node_modules/"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ],
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "import",
+    "vitest"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "semi": "off",
+    "quotes": ["error", "double"],
+    "prettier/prettier": 0,
+    "object-curly-spacing": ["error", "always"],
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    "react/no-unescaped-entities": "off",
+    "react/jsx-no-target-blank": "off",
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-misused-promises": ["error", {
+      "checksVoidReturn": false
+    }],
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": { "delimiter": "semi", "requireLast": true },
+      "singleline": { "delimiter": "semi", "requireLast": false }
+    }],
+    "import/no-duplicates": "error",
+    "import/no-extraneous-dependencies": "error",
+    "import/order": ["error", {
+      "pathGroups": [
+        {
+          "pattern": "@src/**",
+          "group": "unknown",
+          "position": "before"
+        },
+        // ------
+        {
+          "pattern": "@utils",
+          "group": "unknown"
+        },
+        // ------
+        {
+          "pattern": "@layouts",
+          "group": "internal"
+        },
+        {
+          "pattern": "@sections",
+          "group": "internal"
+        },
+        // ------
+        {
+          "pattern": "@components",
+          "group": "internal",
+          "position": "after"
+        },
+        // ------
+        {
+          "pattern": "@test.helpers",
+          "group": "sibling"
+        }
+      ],
+      "pathGroupsExcludedImportTypes": ["builtin"],
+      "groups": [
+        "builtin",
+        "external",
+        "unknown",
+        "internal",
+        ["sibling", "parent"],
+        "index",
+        "object",
+        "type"
+      ],
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc"
+      }
+    }]
+  },
+  "overrides": [{
+    "files": ["tests/**"],
+    "rules": {
+      "@typescript-eslint/unbound-method": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/ban-ts-comment": ["error", {
+        "ts-ignore": "allow-with-description"
+      }]
+    }
+  }]
+}
