@@ -19,7 +19,7 @@ export function About(props: Props) {
   return (
     <Element name="about" data-testid={props["data-testid"]} className={className}>
       <div>
-        <h2>About Me</h2>
+        <h2 className="h2">About Me</h2>
         <div className={style.about}>
           <Avatar />
           <blockquote>

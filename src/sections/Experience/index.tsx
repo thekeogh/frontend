@@ -19,7 +19,7 @@ export function Experience(props: Props) {
   return (
     <Element name="experience" data-testid={props["data-testid"]} className={className}>
       <div>
-        <h2>Experience</h2>
+        <h2 className="h2">Experience</h2>
         <div className={style.grid}>
           <div className={style.column}>
             <Work

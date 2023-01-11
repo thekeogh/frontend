@@ -23,7 +23,7 @@ export function Intro(props: Props) {
           <i className={style.blips} />
         </header>
         <main className={style.body}>
-          <h1>McKeogh<span>.</span></h1>
+          <h1 className="h1">McKeogh<span>.</span></h1>
           <p className="shout">Hello! I’m a Staff Software Engineer</p>
           <Button size="large" onClick={() => scroller.scrollTo("about", { smooth: true })}>Who?</Button>
         </main>
