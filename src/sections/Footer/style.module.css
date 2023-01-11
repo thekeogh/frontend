@@ -1,0 +1,33 @@
+.container {
+  background: var(--color-black-light);
+  flex-direction: column;
+  position: relative;
+}
+
+.social {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  left: 0;
+  bottom: var(--dimension-spacing-large);
+  position: absolute;
+}
+.social a {
+  transition: color 0.1s linear;
+  margin: 0 var(--dimension-spacing-large);
+  color: #fff !important;
+}
+.social a i {
+  font-size: 46px;
+}
+
+.github:hover {
+  color: #171515 !important;
+}
+.linkedin:hover {
+  color: #0a67c2 !important;
+}
+.stackoverflow:hover {
+  color: #f48225 !important;
+}

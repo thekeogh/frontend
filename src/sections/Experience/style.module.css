@@ -1,0 +1,31 @@
+.grid {
+  justify-content: space-between;
+  display: flex;
+}
+.column {
+  padding: var(--dimension-spacing-large);
+  background: #fff;
+  border-radius: var(--dimension-border-radius);
+  flex: 0 0 calc(50% - calc(var(--dimension-spacing-large) / 2));
+}
+
+/*
+  Phone landscape
+*/
+@media (max-width: 812px) {
+  .grid {
+    flex-direction: column;
+  }
+  .column {
+    flex: 1 0 0;
+  }
+  .column:first-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .column:last-child {
+    padding-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

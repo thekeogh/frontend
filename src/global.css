@@ -4,25 +4,41 @@
 :root {
   /* Colours */
   --color-green: #66bb6a;
+  --color-green-hover: #4caf50;
   --color-green-light: #e8f5e9;
+  --color-blue: #448aff;
   --color-blue-light: #81d4fa;
+  --color-orange: #ff8f00;
+  --color-purple: #7e57c2;
+  --color-black-light: #263238;
 
   --color-success: #33c648;
   --color-warning: #fcbb40;
   --color-error: #fc605b;
 
-  --color-background: #f9f9ff;
+  --color-background: #f5f5f5;
   --color-foreground: #000;
   --color-hyperlink: var(--color-green);
+  --color-muted: #757575;
 
   --color-placeholder: #999;
 
   /* Fonts */
   --font-family-default: "Rubik", sans-serif;
-  --font-size-default: 16px;
+  --font-size-default: 18px;
+  --font-size-tiny: 14px;
+  --font-size-small: 16px;
+  --font-size-medium: 26px;
+  --font-size-large: 36px;
+  --font-size-huge: 58px;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-weight-bolder: 800;
+
+  /* Dimensions */
+  --dimension-spacing-large: 42px;
+  --dimension-structure-width: 900px;
+  --dimension-border-radius: 8px;
 }
 
 /*
@@ -39,8 +55,6 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
 li,
 i,
 figure,
@@ -111,7 +125,7 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-size: var(--font-size-default);
-  line-height: 1.5;
+  line-height: 1.4;
   scroll-behavior: smooth;
   text-rendering: optimizespeed;
   -webkit-font-smoothing: antialiased;
@@ -120,11 +134,18 @@ body {
 ::placeholder {
   color: var(--color-placeholder);
 }
-p {
-  margin-bottom: 12px;
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--dimension-spacing-large);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
 }
-p:last-child {
-  margin-bottom: 0;
+.section > div {
+  width: 100%;
+  max-width: var(--dimension-structure-width);
 }
 
 /*
@@ -147,6 +168,38 @@ a:not([class]):visited:hover,
 }
 
 /*
+  Typography
+*/
+h1,
+h2 {
+  margin-bottom: var(--dimension-spacing-large);
+  text-align: left;
+}
+h1 {
+  color: #fff;
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-bolder);
+  line-height: 100%;
+}
+h1 span {
+  color: var(--color-green);
+}
+h2 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+p {
+  margin-bottom: 24px;
+}
+p.shout {
+  color: #fff;
+  font-size: var(--font-size-large);
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/*
   Utils
 */
 .regular {
@@ -160,15 +213,15 @@ a:not([class]):visited:hover,
 }
 
 /*
-  Tablet portrait
-*/
-@media (max-width: 1023px) {
-  /* ... */
-}
-
-/*
   Phone landscape
 */
 @media (max-width: 812px) {
-  /* ... */
+  :root {
+    --dimension-spacing-large: 24px;
+    --font-size-large: 28px;
+    --font-size-huge: 50px;
+  }
+  .section {
+    padding-bottom: calc(var(--dimension-spacing-large) * 5);
+  }
 }

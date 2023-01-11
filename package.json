@@ -23,7 +23,8 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
@@ -33,21 +34,22 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "@vitejs/plugin-react": "^3.0.0",
-    "@vitest/coverage-c8": "^0.26.3",
-    "@vitest/ui": "^0.26.3",
+    "@types/react-scroll": "^1.8.5",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "@vitejs/plugin-react": "^3.0.1",
+    "@vitest/coverage-c8": "^0.27.0",
+    "@vitest/ui": "^0.27.0",
     "eslint": "^8.31.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-vitest": "^0.0.21",
-    "jsdom": "^20.0.3",
+    "eslint-plugin-vitest": "^0.0.25",
+    "jsdom": "^21.0.0",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
     "typescript": "^4.9.4",
-    "vite": "^4.0.3",
+    "vite": "^4.0.4",
     "vite-tsconfig-paths": "^4.0.3",
-    "vitest": "^0.26.3"
+    "vitest": "^0.27.0"
   }
 }
