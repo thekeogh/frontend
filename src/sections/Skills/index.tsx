@@ -19,7 +19,7 @@ export function Skills(props: Props) {
   return (
     <Element name="skills" data-testid={props["data-testid"]} className={className}>
       <div>
-        <h2>My Skills</h2>
+        <h2 className="h2">My Skills</h2>
         <ul className={style.skills}>
           <li className={style.green}>Node.js</li>
           <li className={style.green}>TypeScript</li>
