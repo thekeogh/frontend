@@ -7,16 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Build
 node_modules
 dist
 dist-ssr
 *.local
+
+# SSL
+/ssl/*.key
+/ssl/*.crt
+
+# Testing
+/coverage
+.eslintcache
+e2e/node_modules/
+e2e/.idea/
+e2e/cypress/screenshots/
+e2e/cypress/videos/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

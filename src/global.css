@@ -1,0 +1,227 @@
+/*
+  Variables
+*/
+:root {
+  /* Colours */
+  --color-green: #66bb6a;
+  --color-green-hover: #4caf50;
+  --color-green-light: #e8f5e9;
+  --color-blue: #448aff;
+  --color-blue-light: #81d4fa;
+  --color-orange: #ff8f00;
+  --color-purple: #7e57c2;
+  --color-black-light: #263238;
+
+  --color-success: #33c648;
+  --color-warning: #fcbb40;
+  --color-error: #fc605b;
+
+  --color-background: #f5f5f5;
+  --color-foreground: #000;
+  --color-hyperlink: var(--color-green);
+  --color-muted: #757575;
+
+  --color-placeholder: #999;
+
+  /* Fonts */
+  --font-family-default: "Rubik", sans-serif;
+  --font-size-default: 18px;
+  --font-size-tiny: 14px;
+  --font-size-small: 16px;
+  --font-size-medium: 26px;
+  --font-size-large: 36px;
+  --font-size-huge: 58px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 800;
+
+  /* Dimensions */
+  --dimension-spacing-large: 42px;
+  --dimension-structure-width: 900px;
+  --dimension-border-radius: 8px;
+}
+
+/*
+  Reset
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+i,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+fieldset,
+pre {
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-family: var(--font-family-default);
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  border: 0;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+:focus,
+fieldset {
+  min-width: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+}
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: none;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Structure
+*/
+#root {
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: var(--font-size-default);
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  text-rendering: optimizespeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::placeholder {
+  color: var(--color-placeholder);
+}
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--dimension-spacing-large);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+.section > div {
+  width: 100%;
+  max-width: var(--dimension-structure-width);
+}
+
+/*
+  Hyperlinks
+*/
+a:not([class]):link,
+a:not([class]):visited,
+a:not([class]):hover,
+a:not([class]):active,
+.link {
+  color: var(--color-hyperlink);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:not([class]):hover,
+a:not([class]):visited:hover,
+.link:hover,
+.link:visited:hover {
+  text-decoration: underline;
+}
+
+/*
+  Typography
+*/
+h1,
+h2 {
+  margin-bottom: var(--dimension-spacing-large);
+  text-align: left;
+}
+h1 {
+  color: #fff;
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-bolder);
+  line-height: 100%;
+}
+h1 span {
+  color: var(--color-green);
+}
+h2 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+p {
+  margin-bottom: 24px;
+}
+p.shout {
+  color: #fff;
+  font-size: var(--font-size-large);
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+  Utils
+*/
+.regular {
+  font-weight: var(--font-weight-regular);
+}
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+.bolder {
+  font-weight: var(--font-weight-bolder);
+}
+
+/*
+  Phone landscape
+*/
+@media (max-width: 812px) {
+  :root {
+    --dimension-spacing-large: 24px;
+    --font-size-large: 28px;
+    --font-size-huge: 50px;
+  }
+  .section {
+    padding-bottom: calc(var(--dimension-spacing-large) * 5);
+  }
+}

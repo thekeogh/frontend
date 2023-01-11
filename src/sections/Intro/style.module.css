@@ -1,0 +1,65 @@
+.container {
+  min-height: 100vh;
+  padding: var(--dimension-spacing-large);
+  background: var(--color-blue-light);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.window {
+  width: 100%;
+  max-width: 700px;
+  background: var(--color-black-light);
+  flex-direction: column;
+  display: flex;
+}
+
+.titlebar {
+  width: 100%;
+  height: 42px;
+  padding: 0 22px;
+  background: #fff;
+  align-items: center;
+  display: flex;
+}
+.blips,
+.blips::before,
+.blips::after {
+  width: 12px;
+  height: 12px;
+  background: var(--color-error);
+  border-radius: 50%;
+  position: relative;
+}
+.blips::before,
+.blips::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.blips::before {
+  left: 20px;
+  background: var(--color-warning);
+}
+.blips::after {
+  left: 40px;
+  background: var(--color-success);
+}
+
+.body {
+  padding: var(--dimension-spacing-large);
+  padding-right: 15%;
+}
+.body p {
+  margin-bottom: var(--dimension-spacing-large);
+}
+
+/*
+  Phone landscape
+*/
+@media (max-width: 812px) {
+  .body {
+    padding: var(--dimension-spacing-large);
+  }
+}
