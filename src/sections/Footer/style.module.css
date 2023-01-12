@@ -1,5 +1,6 @@
 .container {
   background: var(--color-black-light);
+  text-align: center;
   flex-direction: column;
   position: relative;
 }

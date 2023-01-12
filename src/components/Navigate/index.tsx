@@ -17,9 +17,9 @@ export function Navigate(props: Props) {
    * Return the component
    */
   return (
-    <button data-testid={props["data-testid"]} className={className} onClick={() => scroller.scrollTo(props.to, { smooth: true })}>
+    <a href={`#${props.to}`} data-testid={props["data-testid"]} className={className} onClick={() => scroller.scrollTo(props.to, { smooth: true })}>
       <span className={style.label}>{props.children}</span>
       <span className={classNames(style.icon, "material-symbols-outlined")}>expand_circle_down</span>
-    </button>
+    </a>
   );
 }

@@ -17,7 +17,7 @@ export function Footer(props: Props) {
   return (
     <Element name="footer" data-testid={props["data-testid"]} className={className}>
       <p className="h1">McKeogh<span>.</span></p>
-      <p className="shout">Staff Software Engineer</p>
+      <p className="shout">Full Stack Staff Software Engineer</p>
       <p className={style.social}>
         <a href="https://github.com/thekeogh" className={style.github}>
           <i className="fa-brands fa-github" />
