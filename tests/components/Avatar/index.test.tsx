@@ -1,4 +1,4 @@
-import { Mock, beforeEach, expect, it } from "vitest";
+import { beforeEach, expect, it } from "vitest";
 
 import { Avatar } from "@components";
 
@@ -11,7 +11,7 @@ beforeEach(() => {
 });
 
 it("Renders the <img>", () => {
-  helpers.render(<Avatar data-testid={handle} />);
+  helpers.render(<Avatar />);
   expect(helpers.screen.getByRole("img")).toBeInTheDocument();
 });
 it("Affixes the default className if not specified", () => {
