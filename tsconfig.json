@@ -26,7 +26,8 @@
       "@layouts": ["src/layouts/index.ts"],
       "@sections": ["src/sections/index.ts"],
       "@src*": ["src*"],
-      "@utils": ["src/utils/index.ts"]
+      "@utils": ["src/utils/index.ts"],
+      "@test.helpers": ["tests/helpers.vitest.ts"]
     }
   },
   "include": ["src", "tests"],

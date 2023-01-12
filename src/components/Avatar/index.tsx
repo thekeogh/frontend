@@ -16,5 +16,5 @@ export function Avatar(props: Props) {
   /**
    * Return the component
    */
-  return <img src={photo} className={className} alt="Photo of Steve McKeogh" title="Photo of Steve McKeogh" />;
+  return <img src={photo} className={className} alt="Photo of Steve McKeogh" title="Photo of Steve McKeogh" data-testid={props["data-testid"]} />;
 }
