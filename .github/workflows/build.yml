@@ -1,0 +1,41 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - v*.*.*
+  pull_request:
+
+env:
+  NODE_VERSION: '19.3'
+
+jobs:
+  lint: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Setup node ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@main
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm ci
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - run: npm run lint   
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Setup node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@main
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run build
