@@ -3,7 +3,8 @@
   max-width: 250px;
   padding: 0;
   background: var(--color-green);
-  color: #fff;
+  color: #fff !important;
+  text-decoration: none !important;
   border: 0;
   overflow: hidden;
   align-items: center;

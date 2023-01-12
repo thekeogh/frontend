@@ -1,8 +1,8 @@
 .container {
   transition: opacity 0.2s linear;
   transform: translateX(-50%);
-  background: transparent;
-  border: 0;
+  color: var(--color-foreground) !important;
+  text-decoration: none !important;
   align-items: center;
   justify-content: center;
   flex-direction: column;

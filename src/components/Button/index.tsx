@@ -18,7 +18,7 @@ interface HrefProps extends Props {
   type: "href";
   to: string;
   newWindow?: boolean;
-  onClick?: never;
+  onClick?: () => void;
 }
 
 export function Button(props: ButtonProps | HrefProps) {
@@ -37,6 +37,7 @@ export function Button(props: ButtonProps | HrefProps) {
         className={className}
         target={props.newWindow ? "_blank" : undefined}
         rel={props.newWindow ? "noreferrer" : undefined}
+        onClick={props.onClick}
       >
         <span>
           {props.children}
