@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import { About, Experience, Footer, Intro, Skills } from "@sections";
 
 export function App() {
@@ -9,6 +11,7 @@ export function App() {
       <Skills />
       <Experience />
       <Footer />
+      <Analytics />
     </>
   );
 }
