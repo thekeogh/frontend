@@ -26,10 +26,10 @@ export function About(props: Props) {
           <div className={style.about}>
             <Avatar />
             <blockquote>
-              <p>I'm Steve McKeogh, a highly experienced Full Stack Staff Software Engineer with over twenty years experience in the industry.</p>
-              <p>I currently specialise in Node.js, TypeScript, PostgreSQL, GraphQL and React but have many more strings to my bow. Check out <a href="#skills" onClick={() => scroller.scrollTo("skills", { smooth: true })}>my skills</a> if you want to know more.</p>
-              <p>Starting way back in 1999 as a junior web developer and moving up to a full stack staff software engineer.</p>
-              <p>I'm currently based out of my little hometown of London, England, I also spent four happy years in Asia when I relocated to Bangkok, Thailand back in 2018.</p>
+              <p>I am Steve McKeogh, a seasoned Full Stack Staff Software Engineer with extensive expertise spanning over two decades in the industry.</p>
+              <p>My primary focus lies in <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">Node.js</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a>, <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">PostgreSQL</a>, <a href="https://graphql.org/" target="_blank" rel="noopener noreferrer">GraphQL</a>, and <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a>, but my skill set extends far beyond these technologies. Feel free to <a href="#skills" onClick={() => scroller.scrollTo("skills", { smooth: true })}>explore my abilities</a> for further details.</p>
+              <p>My journey began in 1999 as a junior web developer, steadily progressing to my current role as a full stack staff software engineer.</p>
+              <p>Presently, I am based in my quaint hometown of London, England. However, I cherished four wonderful years in Asia when I relocated to Bangkok, Thailand, in 2018.</p>
             </blockquote>
           </div>
         </div>

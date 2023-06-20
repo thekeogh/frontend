@@ -28,8 +28,8 @@ export function Skills(props: Props) {
             <li className={style.green}>TypeScript</li>
             <li className={style.green}>GraphQL</li>
             <li className={style.green}>PostGraphile</li>
-            <li className={classNames(style.green, style.legacy)}>PHP</li>
-            <li className={classNames(style.green, style.legacy)}>Laravel</li>
+            <li className={style.green}>PHP</li>
+            <li className={style.green}>Laravel</li>
             <li className={classNames(style.green, style.legacy)}>ColdFusion</li>
           </ul>
           <ul className={style.skills}>
@@ -52,8 +52,8 @@ export function Skills(props: Props) {
           <ul className={style.skills}>
             <li className={style.orange}>Vitest</li>
             <li className={style.orange}>Jest</li>
-            <li className={classNames(style.orange, style.legacy)}>Mocha</li>
-            <li className={classNames(style.orange, style.legacy)}>Chai</li>
+            <li className={style.orange}>Mocha</li>
+            <li className={style.orange}>Chai</li>
             <li className={classNames(style.orange, style.legacy)}>PHPUnit</li>
             <li className={classNames(style.orange, style.legacy)}>PHPSpec</li>
           </ul>
