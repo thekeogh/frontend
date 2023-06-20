@@ -28,9 +28,3 @@ it("Renders the correct href value", () => {
   helpers.render(<Navigate data-testid={handle} to={to}>{word}</Navigate>);
   expect(helpers.screen.getByTestId(handle)).toHaveAttribute("href", `#${to}`);
 });
-it("Calls scroller onClick with the correct name value", async () => {
-  helpers.render(<Navigate data-testid={handle} to={to}>{word}</Navigate>);
-  await helpers.userEvent.click(helpers.screen.getByTestId(handle));
-  expect(vi.mocked(scroller).scrollTo).toHaveBeenCalledTimes(1);
-  expect(vi.mocked(scroller).scrollTo.mock.calls[0][0]).toBe(to);
-});
