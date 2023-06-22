@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { Element } from "react-scroll";
 
+import { Button } from "@components";
+
 import style from "./style.module.css";
 
 interface Props {
@@ -18,6 +20,7 @@ export function Footer(props: Props) {
     <Element name="footer" data-testid={props["data-testid"]} className={className}>
       <p className="h1">McKeogh<span>.</span></p>
       <p className="shout">Full Stack Staff Software Engineer</p>
+      <Button type="href" size="large" to="https://cv.stevemckeogh.com">My CV</Button>
       <p className={style.social}>
         <a href="https://github.com/thekeogh" className={style.github}>
           <i className="fa-brands fa-github" />

@@ -25,7 +25,10 @@ export function Intro(props: Props) {
         <main className={style.body}>
           <h1 className="h1">McKeogh<span>.</span></h1>
           <p className="shout">Hello! I’m a Full Stack Staff Software Engineer</p>
-          <Button type="href" size="large" to="#about" onClick={() => scroller.scrollTo("about", { smooth: true })}>Who?</Button>
+          <div className={style.buttons}>
+            <Button type="href" size="large" to="#about" onClick={() => scroller.scrollTo("about", { smooth: true })}>Who?</Button>
+            <Button type="href" size="large" to="https://cv.stevemckeogh.com">My CV</Button>
+          </div>
         </main>
       </div>
     </Element>
