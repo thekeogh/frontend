@@ -22,7 +22,7 @@ export function Experience(props: Props) {
       <a id={name} />
       <Element name={name} data-testid={props["data-testid"]} className={className}>
         <div>
-          <h2 className="h2">Experience</h2>
+          <h2 className="h2">Experience <a href="https://cv.stevemckeogh.com" className="tiny regular block link">Find out more on my CV</a></h2>
           <div className={style.grid}>
             <div className={style.column}>
               <Work

@@ -55,6 +55,11 @@
   margin-bottom: var(--dimension-spacing-large);
 }
 
+.buttons {
+  column-gap: 12px;
+  display: flex;
+}
+
 /*
   Phone landscape
 */

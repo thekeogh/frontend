@@ -203,13 +203,22 @@ p:last-child {
   Utils
 */
 .regular {
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-regular) !important;
 }
 .bold {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold) !important;
 }
 .bolder {
-  font-weight: var(--font-weight-bolder);
+  font-weight: var(--font-weight-bolder) !important;
+}
+.small {
+  font-size: var(--font-size-small) !important;
+}
+.tiny {
+  font-size: var(--font-size-tiny) !important;
+}
+.block {
+  display: block !important;
 }
 
 /*
