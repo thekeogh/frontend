@@ -1,0 +1,30 @@
+{
+  "short_name": "Steve McKeogh",
+  "name": "Passionate and experienced Full Stack Software Engineer based in London. Specialising in TypeScript, Node.js, React, GraphQL, and PostgreSQL.",
+  "icons": [
+    {
+      "src": "/icon1.png",
+      "sizes": "32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon2.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon3.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon4.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#66bb6a",
+  "background_color": "#171e27"
+}
